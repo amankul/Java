@@ -37,6 +37,7 @@ public class TwoDArraySearch {
 
     boolean isWordFound = false;
     for (char[] row : arr) {
+
       String rowString = String.valueOf(row);
 
       if (rowString.contains(searchSequence)) {

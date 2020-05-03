@@ -1,11 +1,15 @@
 package Selenium;
 
 import org.testng.Assert;
+import org.testng.SkipException;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 /*x ASSERT(fail n halt)  vs VERIFY(ignore fail and continue) */
 
+
+@Listeners(TestNGListeners.class)    // Listeners at class level. Can also be defined in testng.xml at suite level
 public class Asserts {
 
 
@@ -17,7 +21,7 @@ public class Asserts {
 
         try{
 
-            Assert.assertTrue(false,"ALARM HARD 1");
+            Assert.assertTrue(true,"ALARM HARD 1");
             System.out.println("HARD Assertion Failed");
 
             Assert.assertFalse(1<0,"ALARM HARD 2");
@@ -51,6 +55,10 @@ public class Asserts {
 
     }
 
+@Test
+    public static void skippedTest() {
+        throw new SkipException("skipped test");
+    }
 
     }
 

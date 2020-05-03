@@ -38,6 +38,7 @@ public class Hashes {
     set.add(-2);
 
 
+
     map.put(null,"AMIT");                           // Hashmap allows null keys and duplicate values unlike Hashtable and set
     map.put(104,"AMIT");
 

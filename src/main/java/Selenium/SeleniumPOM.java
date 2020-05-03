@@ -1,6 +1,8 @@
 package Selenium;
 
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.SkipException;
+
 
 public class SeleniumPOM {
 
@@ -17,6 +19,7 @@ public class SeleniumPOM {
             	SafariDriver driver = new SafariDriver();
 
             	driver.get("http://demo.guru99.com/");
+            	driver.manage().window().maximize();
 
             test_Home_Page_Appear_Correct(driver);
             test_Telecon_Page_Appear_Correct(driver);
@@ -45,6 +48,8 @@ public class SeleniumPOM {
             objTelecomPage.clickBilling();
 
         }
+
+
 
 
     }

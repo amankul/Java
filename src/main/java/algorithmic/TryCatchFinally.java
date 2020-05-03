@@ -30,6 +30,8 @@ public class TryCatchFinally {
 
       System.out.println("Out of bound catch block");   // catch blocked executed only if right type of exception caught.
 
+        e.getMessage();
+
         return;
 
     }

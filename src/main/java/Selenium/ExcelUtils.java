@@ -18,6 +18,7 @@ public class ExcelUtils {
         FileInputStream ExcelFile = new FileInputStream(Path);
         ExcelWBook = new XSSFWorkbook(ExcelFile);
         ExcelWSheet = ExcelWBook.getSheetAt(0);
+
     }
 
     //This method is to read the test data from the Excel cell
@@ -25,8 +26,8 @@ public class ExcelUtils {
     public static String getCellData(int RowNum, int ColNum) throws Exception{
 
         try {
-        Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
-        String CellData = Cell.getStringCellValue().toString();
+
+            String CellData = ExcelWSheet.getRow(RowNum).getCell(ColNum).getStringCellValue().toString();
 
             return CellData;
         }
@@ -70,8 +71,9 @@ ExcelWSheet.getRow(row).getCell(column).setCellValue(toWrite);
 
 
 
-/*
 
+
+/*
 Below mentioned are some of the interfaces of POI.
 
 XSSFWorkbook: Represents workbook in xlsx file.
@@ -90,4 +92,17 @@ CELL_TYPE_ERROR: Represents an error value in a cell.
 CELL_TYPE_FORMULA: Represents a formula result on a cell.
 CELL_TYPE_NUMERIC: Represents numeric data in a cell.
 CELL_TYPE_STRING: Represents string in a cell.
- */
+
+Keyword driven approach
+
+UI test(AUT switch case)
+|
+|
+TestExecutor -> Excel utils(path,sheet) -> File
+|
+|
+Object reader -> Object repo
+
+*/
+
+
