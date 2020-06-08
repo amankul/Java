@@ -28,6 +28,8 @@ public class Selenium {
 
 
 
+
+
         System.out.println("Chrome loaded yay " + System.currentTimeMillis() );
 
            	driver.get("http://demo.guru99.com/");
@@ -85,3 +87,26 @@ System.out.println("Clicked Telecom project " + System.currentTimeMillis() );
 
     }
 
+/*
+XPATH
+
+Create own xpath - (// relative)
+ATTRIBUTE : //tagname[@attribute='value']
+CONTAINS : //*[contains(text(), 'abc')]
+TEXT : //h2[text()='Bank']
+STARTS-WITH : //*[starts-with(@attribute, 'txt')]
+AND/OR : //*[starts-with(@attribute, 'txt') or @id='123']
+FOLLOWING OR PRECEEDING : //input[@id=’’]/following::input[1]
+
+CSS (Faster and not browser specific)
+ATTRIBUTE: tagname[attribute='value']...
+ID : tagname#id
+CLASS: tagname.class
+CONTAINS: tagname[attribute*='value']
+STARTS-WITH : tagname[attribute^='value']
+ENDS-WITH : tagname[attribute$='value']
+CHAINED(parent,child) : tagname.class, tagname#id
+FIRST/LAST OF TYPE : tagname#id>li:first-of-type
+ */
+
+ */
