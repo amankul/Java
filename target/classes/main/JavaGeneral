@@ -1,0 +1,15 @@
+	                       Variable	                                      Method	                                         Class	                                                    Constructor
+Default	    Available to any other class in the same package	    Available to any other class in the same package	   Can be   instantiated in any other class in same package.
+Private 	Within same class	                                    Within same class	                                   NA	                                                         Within same class
+Protected	Any class within package or subclass in other package	Any class within package or subclass in other package  NA	                                 Any class within package or subclass in other pkg
+Public	    Any class	                                            Any class	                                           Any class	                                                  Any class
+
+
+Main is always public static void.
+
+Methods declared public in a superclass also must be public in all subclasses. Methods declared protected in a superclass must either be protected or public in subclasses; they cannot be private.
+Private methods are not inherited.
+
+Abstract class cannot be instantiated too. Also abstract methods need to go in abstract class. Their implementation will be provided by child classes.
+
+Final variable cannot be reassigned. Final method cannot be overridden. Final class cannot be extended.
