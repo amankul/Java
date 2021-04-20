@@ -8,10 +8,10 @@ Size() function recursively calculates the size of a tree. It works as follows:
 
 public class BinaryTree {
 
-  Node root;
+     Node root;
 
 
-  private int size(Node node) {
+  private  int size(Node node) {
     if(node == null)
       return 0;
     else
@@ -19,30 +19,31 @@ public class BinaryTree {
   }
 
 
-  public static void main(String[] args) {
+  public  void main(String[] args) {
 
     BinaryTree bt = new BinaryTree();
 
     Node root = new Node(1);
-    bt.root = new Node(1);
-    bt.root.left = new Node(2);
-    bt.root.right = new Node(3);
-    bt.root.left.left = new Node(4);
-    bt.root.left.right = new Node(5);
+    root = new Node(1);
+    root.left = new Node(2);
+    root.right = new Node(3);
+    root.left.left = new Node(4);
+    root.left.right = new Node(5);
 
 
     System.out.println("\n Postorder traversal of binary tree is ");     // postorder prints left - right - root
     bt.printPostorder();
 
+
 System.out.println("Size of tree is " + bt.size(bt.root));
 
 }
 
-   void printPostorder() {
+    void  printPostorder() {
     printPostorder(root);
   }
 
-  void printPostorder(Node node) {
+   void printPostorder(Node node) {
 
     if(node == null)
       return;
@@ -54,19 +55,19 @@ System.out.println("Size of tree is " + bt.size(bt.root));
     System.out.println(node.data);
 
   }
-
+  
 
 }
 
 
 class Node {
-  int data;
-  Node left,right;
+	  int data;
+	  Node left,right;
 
-  public Node(int data) {
-    this.data = data;
-    left = right = null;
-  }
+	  public Node(int data) {
+	    this.data = data;
+	    left = right = null;
+	  }
 
-}
+	}
 

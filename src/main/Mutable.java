@@ -39,20 +39,18 @@ public class Mutable {
 
 
 		Sumo a1 = new Sumo();
-		Sumo a2 = new Sumo();
-		Sumo a3 = new Sumo();
+		
 
 		a1.printWeight();
+		
 
-		a1.weight = 200;
-		a1.printWeight();
-
+		Sumo a2 = a1;
 		a2 = a1;
-		a3 = a2;
+		a2.weight = 500;
+
 
 		a2.printWeight();                 // when objects equated, values copied too
-		a3.weight = 500;
-		a1.printWeight();
+        a1.printWeight();
 
 
 

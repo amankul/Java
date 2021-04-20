@@ -11,18 +11,31 @@ import java.util.List;
 public class SumOfArrayElements {
 
   public static void main(String[] args) {
-
-    int a[] = {10, 15, 3, 7};
+  
     int k = 17;
-    int diff;
-
     List<Integer> list = new ArrayList<Integer>(Arrays.asList(10, 15, 3, 7));
-    for (int i : list) {
-      diff = k - i;
-      if (list.contains(diff)) {
-        System.out.println("Given no is sum of " + i + " and " + diff);
-        break;
-      }
-    }
+    
+    System.out.println("Given element " + k + " is sum of element at given two indexes" + Arrays.toString(getIndexes(k,list)));
+    
   }
+    
+     private static int[] getIndexes(int k, List<Integer> list) {
+	// TODO Auto-generated method stub
+    	 int retIndexes[] = {-1,-1};
+    	 int diff;
+    	 
+    	 for (int i : list)
+    	 {
+    	      diff = k - i;
+    	      if (list.contains(diff) && list.indexOf(i) != list.indexOf(diff)) {
+    	        System.out.println("Given no is sum of " + i + " and " + diff);
+    	        retIndexes[0] = list.indexOf(i);
+    	        retIndexes[1] = list.indexOf(diff);
+    	        break;
+    	      }
+    	    }
+    	 return retIndexes;
 }
+
+	
+  }

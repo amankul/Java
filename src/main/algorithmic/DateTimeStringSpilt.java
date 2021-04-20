@@ -15,7 +15,7 @@ public class DateTimeStringSpilt {
   System.out.println(dateTime);
 
     String[] date1 = dateTime.split("-");
-    System.out.println("YEAR is " + date1[0] + "\n" + "MONTH is " + date1[1]) ;
+    System.out.println("YEAR is " + date1[0] + "\n" + "MONTH is " + date1[1] + "\n" ) ;
 
     StringTokenizer st = new StringTokenizer(dateTime.substring(dateTime.indexOf("T")+1),":");                  // Splits time into tokens
     System.out.println("HOUR is " + st.nextToken(":"));

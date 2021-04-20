@@ -13,6 +13,7 @@ public class Anagram {
     String inputStr1 = "Mother In Lawn";
     String inputStr2 = "Hitler Woman";
 
+  
 
     inputStr1 = inputStr1.replaceAll("\\s","");               //Removing white spaces
     inputStr2 = inputStr2.replaceAll("\\s","");

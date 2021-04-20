@@ -23,7 +23,7 @@ public class SuperclassTypecastingSubclass {
 		out.println((S instanceof Student) + "STUDENT");
 		out.println((S instanceof Person) + "STUDENT");
 
-//    P=S;
+    P=S;
 
 //		S = (Student) P;
 

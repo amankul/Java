@@ -7,7 +7,7 @@ public class Palindrome {
 
   public static void main(String[] args) {
 
-    String pal = "AffA";
+    String pal = "AffA1";
 
     System.out.println("Reverse string " + revStr(pal));
 

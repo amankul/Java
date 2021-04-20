@@ -15,7 +15,6 @@ public class UniqueString {
 
     int index = sc.nextInt();
 
-
     if (index <= str.length()) {
 
       for (int i = 0; i < index ; i++) {
@@ -25,8 +24,30 @@ public class UniqueString {
       System.out.println("Index more than string length ");
     }
 
+  System.out.println( hs.size() == index ? "Unique" : "Not Unique " + hs.size()  );   //int does not support .equals
+  
+  String str1 = "eyyack";
+  System.out.println( "Longest substring of unique chars is " + longestUnique(str1)); 
+		  
+    
+    
+}
 
-    System.out.println( hs.size() == index ? "Unique" : "Not Unique " + hs.size()  );   //int does not support .equals
+private static String longestUnique(String str1) {
+	// TODO Auto-generated method stub
+	
+	String resultSubstr="";
+	int length=0;
+	for (char c: str1.toCharArray()) {
+		if(str1.indexOf(c) == str1.lastIndexOf(c))
+			resultSubstr = resultSubstr + "" + c;
+		else {
+			
+			length = Math.max(length, resultSubstr.length());
+			resultSubstr="";
+		}
+	}
+	return null;
 }
 
 }
