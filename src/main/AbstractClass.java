@@ -1,11 +1,8 @@
-package main;
-
+package src.main;
 
 //import java.io.IOException;
 
-
 import static java.lang.System.out;
-
 
 class TESTAMIT {
 	

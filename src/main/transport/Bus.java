@@ -1,4 +1,4 @@
-package main.transport;
+package src.main.transport;
 import test.java.Car;
 
 public class Bus {
