@@ -103,5 +103,9 @@ STARTS-WITH : tagname[attribute^='value']
 ENDS-WITH : tagname[attribute$='value']
 CHAINED(parent,child) : tagname.class, tagname#id
 FIRST/LAST OF TYPE : tagname#id>li:first-of-type
+AND <input type="radio" class="class1" /> Just string together without spaces input[type="radio"].class1
+
+OR div.class1,    comma separated
+div.class2
  */
 
